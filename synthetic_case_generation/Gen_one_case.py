@@ -58,7 +58,7 @@ def Gen_one_case( case_id, max_prim_in, max_op_cnt ):
         # infer the data precision with randomness
         opr1_prec = opr1[2]
         opr2_prec = opr2[2]
-        op_prec = random.randint( max(2, (opr1_prec + opr2_prec)/4 ), min(opr1_prec + opr2_prec, 16) )
+        op_prec = random.randint( int(max(2, (opr1_prec + opr2_prec)/4 )), min(opr1_prec + opr2_prec, 16) )
         op[2] = all_ops[op[0]][2] = op_prec
 
         # add two in-edges for the operator
